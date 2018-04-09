@@ -28,7 +28,5 @@ public class StompingEnemies : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        Debug.Log(stompable);
     }
 }
