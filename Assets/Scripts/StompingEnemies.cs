@@ -11,18 +11,20 @@ public class StompingEnemies : MonoBehaviour
 
     private float stompCheckRadius = 0.2f;
     private bool stompable = false;
-
     // Use this for initialization
     private void Start ()
     {
         stompable = false;
 	}
-	
 	// Update is called once per frame
 	private void Update ()
     {
+        Stomping();
+    }
+    private void Stomping()
+    {
         stompable = Physics2D.OverlapCircle(stompCheck.position, stompCheckRadius, stompLayer);
-        if(stompable== true)
+        if (stompable == true)
         {
             Destroy(this.gameObject);
         }

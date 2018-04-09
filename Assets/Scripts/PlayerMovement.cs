@@ -23,15 +23,12 @@ public class PlayerMovement : MonoBehaviour
     private bool isGround = false;
     private bool doubleJumped = true;
     private Rigidbody2D playerrigid;
-
-
 	// Use this for initialization
 	private void Start ()
     {
         playerrigid = GetComponent<Rigidbody2D>();
         doubleJumped = true;
-	}
-	
+	}	
 	// Update is called once per frame
 	private void FixedUpdate ()
     {

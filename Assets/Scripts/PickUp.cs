@@ -5,9 +5,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     private PlayerMovement player;
-
     private SpriteRenderer spriteRenderer;
-
     private CircleCollider2D circleCollider2D;
 
     // Use this for initialization
