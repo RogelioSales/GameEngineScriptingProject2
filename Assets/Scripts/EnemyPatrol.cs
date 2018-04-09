@@ -13,7 +13,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private bool movingRight = true;
 	// Update is called once per frame
-	void Update ()
+	private void Update ()
     {
         transform.Translate(Vector2.right * patrolSpeed * Time.deltaTime);
         RaycastHit2D ground = Physics2D.Raycast(groundCheck.position ,Vector2.down, distance);

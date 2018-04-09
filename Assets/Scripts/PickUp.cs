@@ -11,7 +11,7 @@ public class PickUp : MonoBehaviour
     private CircleCollider2D circleCollider2D;
 
     // Use this for initialization
-    void Start ()
+    private void Start ()
     {     
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
