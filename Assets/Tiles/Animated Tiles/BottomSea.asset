@@ -11,8 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4079849173dbcf94d9ef237b69be7d31, type: 3}
   m_Name: BottomSea
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 21300006, guid: 05a3bcbb3a1589a479cbfb557f11fad7, type: 3}
+  - {fileID: 21300008, guid: 05a3bcbb3a1589a479cbfb557f11fad7, type: 3}
+  - {fileID: 21300010, guid: 05a3bcbb3a1589a479cbfb557f11fad7, type: 3}
+  - {fileID: 21300008, guid: 05a3bcbb3a1589a479cbfb557f11fad7, type: 3}
+  m_MinSpeed: 5
+  m_MaxSpeed: 10
   m_AnimationStartTime: 0
-  m_TileColliderType: 0
+  m_TileColliderType: 1
