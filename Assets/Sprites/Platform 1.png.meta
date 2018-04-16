@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c99124625f2d18a42a0e9373ba4d9d87
-timeCreated: 1523826610
+timeCreated: 1523901777
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -25,6 +25,10 @@ TextureImporter:
     21300036: StoneRightStairs
     21300038: StoneColumnBottom
     21300040: BrokenColumnRight
+    21300042: StaircaseLeft1
+    21300044: Staircaseleft2
+    21300046: StaircaseRight1
+    21300048: StaircaseRight2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -384,7 +388,7 @@ TextureImporter:
         serializedVersion: 2
         x: 460
         y: 27
-        width: 360
+        width: 120
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -396,9 +400,9 @@ TextureImporter:
       name: StoneRightStairs
       rect:
         serializedVersion: 2
-        x: 857
+        x: 1096
         y: 25
-        width: 360
+        width: 120
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -415,7 +419,7 @@ TextureImporter:
         width: 105
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -428,6 +432,62 @@ TextureImporter:
         y: 204
         width: 120
         height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StaircaseLeft1
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 27
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Staircaseleft2
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 27
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StaircaseRight1
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 25
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StaircaseRight2
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 25
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
