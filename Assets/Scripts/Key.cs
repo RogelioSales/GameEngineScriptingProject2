@@ -11,15 +11,12 @@ public class Key : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private CircleCollider2D circleCollider2D;
     private bool collectedKey;
-    
-
     // Use this for initialization
     private void Start ()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         circleCollider2D = GetComponent<CircleCollider2D>();
-        collectedKey = false;
-        
+        collectedKey = false;       
     }
     private void Update()
     {

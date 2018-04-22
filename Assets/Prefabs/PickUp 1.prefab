@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212529556429666832}
   - component: {fileID: 58808826744985952}
   - component: {fileID: 114404891540514896}
+  - component: {fileID: 95565030693405212}
   m_Layer: 0
   m_Name: PickUp 1
   m_TagString: Untagged
@@ -51,12 +52,29 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0077415705, y: 0.021010518}
   serializedVersion: 2
   m_Radius: 0.32728708
+--- !u!95 &95565030693405212
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027337122032514}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3dc2eeb4639634e468fc5853ccbe0054, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114404891540514896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130607e2f7974c44e9f6a22105428e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpReturn: {fileID: 7400000, guid: cfc1ecb7114a87841bf4c26137dc5b40, type: 2}
 --- !u!212 &212529556429666832
 SpriteRenderer:
   m_ObjectHideFlags: 1

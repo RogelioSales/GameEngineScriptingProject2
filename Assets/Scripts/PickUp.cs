@@ -21,7 +21,6 @@ public class PickUp : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         circleCollider2D = GetComponent<CircleCollider2D>();
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -35,7 +34,6 @@ public class PickUp : MonoBehaviour
             StartCoroutine(ResetPickUp());
         }
     }
-
     IEnumerator ResetPickUp()
     {
         yield return new WaitForSecondsRealtime(5.0f);
@@ -45,8 +43,6 @@ public class PickUp : MonoBehaviour
         yield return new WaitForSeconds(pickUpReturn.length);
         circleCollider2D.enabled = true;
         anim.SetBool("IsUsed", false);
-
-
     }
 
 }
