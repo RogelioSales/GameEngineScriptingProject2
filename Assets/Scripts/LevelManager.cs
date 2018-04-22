@@ -6,10 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject CurrentSpawnPoint
     {
-        get
-        { return currentSpawnpoint; }
-        set
-        { currentSpawnpoint = value; }
+        get { return currentSpawnpoint; }
+        set{ currentSpawnpoint = value; }
     }
     [SerializeField]
     private GameObject currentSpawnpoint;
