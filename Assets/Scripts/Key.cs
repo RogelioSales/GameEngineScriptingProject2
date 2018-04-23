@@ -7,15 +7,19 @@ public class Key : MonoBehaviour
 {
     [SerializeField]
     private Image keyImage;
+    [SerializeField]
+    private AnimationClip keyAnim;
 
     private SpriteRenderer spriteRenderer;
-    private CircleCollider2D circleCollider2D;
+    private BoxCollider2D boxCollider2D;
     private bool collectedKey;
+    private Animator anim;
     // Use this for initialization
     private void Start ()
     {
+        anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        circleCollider2D = GetComponent<CircleCollider2D>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
         collectedKey = false;       
     }
     private void Update()
@@ -29,11 +33,18 @@ public class Key : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            spriteRenderer.enabled = false;
-            circleCollider2D.enabled = false;
-            collectedKey = true;
-            Debug.Log(collectedKey);
-            IncentoryManager.HasKey = collectedKey;
+            StartCoroutine(KeyAnimations());
         }
+    }
+    IEnumerator KeyAnimations()
+    {
+        anim.SetTrigger("IsTouched");
+        yield return new WaitForSeconds(keyAnim.length);
+        spriteRenderer.enabled = false;
+        boxCollider2D.enabled = false;
+        collectedKey = true;
+        Debug.Log(collectedKey);
+        IncentoryManager.HasKey = collectedKey;
+
     }
 }
