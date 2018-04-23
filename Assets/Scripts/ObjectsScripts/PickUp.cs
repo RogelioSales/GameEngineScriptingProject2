@@ -9,8 +9,6 @@ public class PickUp : MonoBehaviour
     private PlayerMovement player;
     private CircleCollider2D circleCollider2D;
     private Animator anim;
-    //rivate bool isUsed;
-   // private bool isReturning;
 
     // Use this for initialization
     private void Start ()
@@ -23,8 +21,7 @@ public class PickUp : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            //isUsed = true;
-            //isReturning = false;
+           
             anim.SetBool("IsReturning", false);
             anim.SetBool("IsUsed", true);
             player.DoubleJumped = false;
@@ -35,8 +32,6 @@ public class PickUp : MonoBehaviour
     IEnumerator ResetPickUp()
     {
         yield return new WaitForSecondsRealtime(5.0f);
-      //  isUsed = false;
-      //  isReturning = true;
         anim.SetBool("IsReturning",true);
         yield return new WaitForSeconds(pickUpReturn.length);
         circleCollider2D.enabled = true;
