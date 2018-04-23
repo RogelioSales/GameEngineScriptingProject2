@@ -7,7 +7,6 @@ public class PickUp : MonoBehaviour
     [SerializeField]
     private AnimationClip pickUpReturn;
     private PlayerMovement player;
-    private SpriteRenderer spriteRenderer;
     private CircleCollider2D circleCollider2D;
     private Animator anim;
     private bool isUsed;
@@ -18,7 +17,6 @@ public class PickUp : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         circleCollider2D = GetComponent<CircleCollider2D>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
