@@ -11,35 +11,31 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private Slider healthSlider;
     [SerializeField]
-    private Image hitImage;
-    //  [SerializeField]
-    //   private AudioClip 
+    private GameObject hitImage;
     [SerializeField]
     private float flashSpeed;
     [SerializeField]
-    private Color flashColor = Color.white;
-
-
-   // private Animator anim;
-    // private AudioSource
+    private GameObject painImage;
     private PlayerMovement playerMovement;
     private LevelManager lvlManager;
     private bool isDead;
     private bool damaged;
+    private GameObject enemy;
     private void Awake()
     {
+        lvlManager = FindObjectOfType<LevelManager>();
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
         playerMovement = GetComponent<PlayerMovement>();
         currentHealth = maxHealth;
+
     }
     // Update is called once per frame
-    private void Update ()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (damaged)
-            hitImage.color = flashColor;
-        else
-            hitImage.color = Color.Lerp(hitImage.color, Color.clear, flashSpeed * Time.deltaTime);
-        damaged = false;	
-	}
+        if (collision.gameObject == enemy)
+            StartCoroutine(Damaged());
+    }
+
     public void TakingDamage(int amount)
     {
         damaged = true;
@@ -53,6 +49,18 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = true;
         playerMovement.enabled = false;
+        lvlManager.RespawnPlayer();
+        isDead = false;
+        playerMovement.enabled = true;
+        healthSlider.value = maxHealth;
+        currentHealth = maxHealth;
     }
-
+    IEnumerator Damaged()
+    {
+        hitImage.SetActive(false);
+        painImage.SetActive(true);
+        yield return new WaitForSeconds(flashSpeed);
+        painImage.SetActive(false);
+        hitImage.SetActive(true);
+    }
 }
