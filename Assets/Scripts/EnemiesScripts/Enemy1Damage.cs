@@ -15,6 +15,10 @@ public class Enemy1Damage : MonoBehaviour
     private Animator anim;
     private bool inRange;
 
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -24,12 +28,18 @@ public class Enemy1Damage : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject == player)
+        {
+            anim.SetBool("IsAngry", true);
             inRange = true;
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject == player)
+        {
+            anim.SetBool("IsAngry",false);
             inRange = false;
+        }
     }
 
 	
