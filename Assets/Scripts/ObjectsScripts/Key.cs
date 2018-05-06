@@ -14,9 +14,11 @@ public class Key : MonoBehaviour
     private BoxCollider2D boxCollider2D;
     private bool collectedKey;
     private Animator anim;
+    private PlayerMovement playerMove;
     // Use this for initialization
     private void Start ()
     {
+        playerMove = FindObjectOfType<PlayerMovement>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -38,6 +40,7 @@ public class Key : MonoBehaviour
     }
     IEnumerator KeyAnimations()
     {
+        playerMove.enabled = false;
         anim.SetTrigger("IsTouched");
         yield return new WaitForSeconds(keyAnim.length);
         spriteRenderer.enabled = false;
@@ -45,6 +48,7 @@ public class Key : MonoBehaviour
         collectedKey = true;
         Debug.Log(collectedKey);
         IncentoryManager.HasKey = collectedKey;
+        playerMove.enabled = true;
 
     }
 }

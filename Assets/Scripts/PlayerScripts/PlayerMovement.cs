@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 	private void FixedUpdate ()
     {
         isGround = Physics2D.OverlapCircle(groundCheck.position,groundCheckRadius,groundLayer);
+        Debug.Log(isGround);
         Move();
         Jump();
 	}
@@ -42,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (movement > 0.5f || movement < -0.5f)
         {
-            //Using the Transform component.
             transform.Translate(new Vector2(movement * moveSpeed * Time.deltaTime, 0f));
 
             //Using Rigidbody2D to move game Object.
