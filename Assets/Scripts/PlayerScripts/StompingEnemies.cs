@@ -20,6 +20,7 @@ public class StompingEnemies : MonoBehaviour
     private EnemyPatrol enemyMove;
     private BoxCollider2D box;
     private PlayerMovement playerMove;
+    private Rigidbody2D rigid;
     // Use this for initialization
     private void Start ()
     {
@@ -27,6 +28,7 @@ public class StompingEnemies : MonoBehaviour
         box = GetComponent<BoxCollider2D>();
         enemyMove = GetComponent<EnemyPatrol>();
         anim = GetComponent<Animator>();
+        rigid = GetComponent<Rigidbody2D>();
         stompable = false;
 	}
 	// Update is called once per frame
@@ -48,15 +50,12 @@ public class StompingEnemies : MonoBehaviour
     {
         playerMove.enabled = false;
         anim.SetBool("IsKilled",true);
+        rigid.constraints = RigidbodyConstraints2D.FreezePositionY;
         enemyMove.enabled = false;
         box.enabled = false;
         stompArea.SetActive(false);
         yield return new WaitForSeconds(death.length);
         enemyToKill.SetActive(false);
-        box.enabled = true;
-        stompArea.SetActive(true);
-        playerMove.enabled = true;
-
         box.enabled = true;
         stompArea.SetActive(true);
         playerMove.enabled = true;

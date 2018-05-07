@@ -112,8 +112,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042716913082578}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.611, y: 4.665, z: -1.38}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.036, y: -1.458, z: 0}
   m_LocalScale: {x: 0.9470517, y: 0.80610645, z: 1}
   m_Children:
   - {fileID: 4372097484415512}
@@ -129,7 +129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214868759687664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.37, z: 0}
+  m_LocalPosition: {x: 0, y: -0.318, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4378523973480006}
@@ -265,6 +265,7 @@ MonoBehaviour:
   death: {fileID: 7400000, guid: 8e519e639c960cb49888d0376fd2abb4, type: 2}
   stompArea: {fileID: 1912798881875220}
   enemyToKill: {fileID: 1042716913082578}
+  box: {fileID: 61025544307157982}
 --- !u!114 &114685587316520364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,8 +324,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1223713413
-  m_SortingLayer: 3
+  m_SortingLayerID: -1487825251
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300032, guid: 043d09e20f034d142aaa8b093c22227b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
