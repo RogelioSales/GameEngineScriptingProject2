@@ -41,6 +41,7 @@ public class StompingEnemies : MonoBehaviour
         {
            
             StartCoroutine(Killed());
+          
         }
     }
     IEnumerator Killed()
@@ -51,7 +52,13 @@ public class StompingEnemies : MonoBehaviour
         box.enabled = false;
         stompArea.SetActive(false);
         yield return new WaitForSeconds(death.length);
-        Destroy(enemyToKill);
+        enemyToKill.SetActive(false);
+        box.enabled = true;
+        stompArea.SetActive(true);
+        playerMove.enabled = true;
+
+        box.enabled = true;
+        stompArea.SetActive(true);
         playerMove.enabled = true;
     }
 }
