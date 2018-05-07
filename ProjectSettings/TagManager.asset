@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Stomp
+  - Enemies
+  - Enemy2
   layers:
   - Default
   - TransparentFX
@@ -45,6 +47,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1263513073
+    locked: 0
+  - name: BackGround2
+    uniqueID: 2418184287
     locked: 0
   - name: Platform
     uniqueID: 3071253883

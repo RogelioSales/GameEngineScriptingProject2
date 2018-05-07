@@ -12,6 +12,8 @@ public class StompingEnemies : MonoBehaviour
     private AnimationClip death;
     [SerializeField]
     private GameObject stompArea;
+    [SerializeField]
+    private GameObject enemyToKill;
     private Animator anim;
     private float stompCheckRadius = 0.2f;
     private bool stompable = false;
@@ -49,7 +51,7 @@ public class StompingEnemies : MonoBehaviour
         box.enabled = false;
         stompArea.SetActive(false);
         yield return new WaitForSeconds(death.length);
-        Destroy(this.gameObject);
+        Destroy(enemyToKill);
         playerMove.enabled = true;
     }
 }

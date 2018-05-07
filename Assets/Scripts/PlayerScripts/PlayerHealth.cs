@@ -21,10 +21,14 @@ public class PlayerHealth : MonoBehaviour
     private bool isDead;
     private bool damaged;
     private GameObject enemy;
+    private GameObject enemies;
+    private GameObject enemy2;
     private void Awake()
     {
         lvlManager = FindObjectOfType<LevelManager>();
         enemy = GameObject.FindGameObjectWithTag("Enemy");
+        enemies = GameObject.FindGameObjectWithTag("Enemies");
+        enemy2 = GameObject.FindGameObjectWithTag("Enemy2");
         playerMovement = GetComponent<PlayerMovement>();
         currentHealth = maxHealth;
 
@@ -32,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == enemy)
+        if (collision.gameObject == enemy || collision.gameObject == enemies)
             StartCoroutine(Damaged());
     }
 

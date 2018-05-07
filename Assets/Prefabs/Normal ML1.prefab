@@ -112,9 +112,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1042716913082578}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.036, y: -1.458, z: 0}
-  m_LocalScale: {x: 1.3318974, y: 1.3215255, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.611, y: 4.665, z: -1.38}
+  m_LocalScale: {x: 0.9470517, y: 0.80610645, z: 1}
   m_Children:
   - {fileID: 4372097484415512}
   - {fileID: 4317453963618182}
@@ -154,7 +154,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!61 &61025544307157982
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -264,6 +264,7 @@ MonoBehaviour:
   stompCheck: {fileID: 0}
   death: {fileID: 7400000, guid: 8e519e639c960cb49888d0376fd2abb4, type: 2}
   stompArea: {fileID: 1912798881875220}
+  enemyToKill: {fileID: 1042716913082578}
 --- !u!114 &114685587316520364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,7 +323,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1487825251
+  m_SortingLayerID: -1223713413
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300032, guid: 043d09e20f034d142aaa8b093c22227b, type: 3}
